@@ -1,2 +1,2 @@
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django3-personal-portfolio-production.up.railway.app']
