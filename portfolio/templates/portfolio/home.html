@@ -4,6 +4,7 @@
 
 {% block content %}
 
+<img src="{% static 'portfolio/hello.jpg' %}">
 
 <div class="row justify-content-center mb-3">
   <div class="col-md-9 text-center">
@@ -18,7 +19,7 @@
   <div class="col-lg-4 col-md-6">
 
     {% if project.url %}
-    <a href="{{ project.url }}">
+    <a href="{{ project.url }}" target="_blank">
       <img src="{{ project.image.url }}" class="img-fluid mb-2">
     </a>
     {% else %}
