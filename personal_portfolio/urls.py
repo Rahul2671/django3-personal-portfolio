@@ -19,11 +19,18 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from portfolio import views
+from django.contrib.auth.models import User
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('blog/', include('blog.urls')),
 ]
+
+User.objects.create_superuser(
+    'rahul',
+    'rahul@gmail.com',
+    'rahul123'
+)
 
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
